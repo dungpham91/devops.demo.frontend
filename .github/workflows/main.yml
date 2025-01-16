@@ -88,12 +88,12 @@ jobs:
 
       - name: Build DAST Docker image
         run: |
-          docker build -t frontend:${{ github.sha }} -f Dockerfile .
+          docker build -t dungpham91/frontend:${{ github.sha }} -f Dockerfile .
 
       - name: Run Trivy Scanner
         uses: aquasecurity/trivy-action@18f2510ee396bbf400402947b394f2dd8c87dbb0 # 0.29.0
         with:
-          image-ref: 'frontend:${{ github.sha }}'
+          image-ref: 'dungpham91/frontend:${{ github.sha }}'
           format: 'sarif'
           output: 'trivy-results.sarif'
 
