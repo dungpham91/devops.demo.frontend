@@ -18,6 +18,9 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  VUE_APP_API_BASE_URL: ${{ secrets.VUE_APP_API_BASE_URL }}
+
 jobs:
   lint:
     runs-on: ubuntu-latest
