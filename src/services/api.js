@@ -1,8 +1,7 @@
 import axios from 'axios';
 
-// Tạo instance axios với cấu hình
 const api = axios.create({
-  baseURL: process.env.VUE_APP_API_BASE_URL,  // Lấy URL từ biến môi trường
+  baseURL: process.env.VUE_APP_API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },
