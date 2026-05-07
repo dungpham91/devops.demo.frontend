@@ -1,4 +1,4 @@
-FROM node:25 AS build
+FROM node:26 AS build
 WORKDIR /app
 ARG VUE_APP_API_BASE_URL
 COPY package*.json ./
